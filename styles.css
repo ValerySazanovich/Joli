@@ -438,10 +438,24 @@ a {
 
 
 @media (max-width: 428px) {
+
+   .tables__info {
+      padding-top: 80px;
+   }
+
+   .tables__info-title {
+      font-size: 35px;
+   }
+
    .tables__info-img2 {
-      max-width: 190px;
+      max-width: 180px;
       right: 5px;
-      top: 110px;
+      top: 90px;
+   }
+
+   .tables__info-about {
+      width: 135px;
+      height: 40px;
    }
 
 }
