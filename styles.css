@@ -174,10 +174,6 @@ p {
    flex-shrink: 0;
 }
 
-.header__top-menu {
-   padding: 0 0 0 40px;
-}
-
 .menu__list {
    display: flex;
    justify-content: center;
@@ -228,7 +224,7 @@ p {
    .header__top {
       flex-direction: column;
       row-gap: 10px;
-      padding-top: 20px;
+      padding-top: 30px;
    }
 
    .menu__list {
