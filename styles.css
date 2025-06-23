@@ -1,0 +1,260 @@
+@font-face {
+   font-family: "Work Sans";
+   src: url("./fonts/WorkSans-Regular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto";
+   src: url("./fonts/Roboto-Regular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* ---------Reset_styles---------- */
+
+/**
+Нормализация блочной модели
+*/
+*,
+::before,
+::after {
+   box-sizing: border-box;
+}
+
+/**
+   Убираем внутренние отступы слева тегам списков,
+   у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+   padding-left: 0;
+}
+
+/**
+   Убираем внешние отступы body и двум другим тегам,
+   у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+   margin: 0;
+}
+
+/**
+   Убираем внешние отступы вертикали нужным тегам,
+   у которых есть атрибут class
+ */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+   margin-block: 0;
+}
+
+:where(dd[class]) {
+   margin-left: 0;
+}
+
+/**
+   Убираем стандартный маркер маркированному списку,
+   у которого есть атрибут class
+ */
+:where(ul[class]) {
+   list-style: none;
+}
+
+/**
+   Упрощаем работу с изображениями и видео
+ */
+img {
+   display: block;
+   max-width: 100%;
+}
+
+/**
+   Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+   font: inherit;
+}
+
+html {
+   /**
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+   height: 100%;
+   /**
+   Плавный скролл
+ */
+   scroll-behavior: smooth;
+}
+
+body {
+   /**
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+   min-height: 100%;
+   /**
+      Унифицированный интерлиньяж
+   */
+   line-height: 1.5;
+}
+
+/**
+   Удаляем все анимации и переходы для людей,
+   которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+   * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+   }
+}
+
+
+/* --------Global_variables-------- */
+
+:root {
+   --color-white: #FFFFFF;
+   --color-dark: #20201F;
+   --color-light-green: #F7F7F7;
+   --color-dark-green: #E5E2DE;
+
+
+   --font-family-base: "Work Sans", sans-serif;
+   --font-family-title: "Roboto", sans-serif;
+
+}
+
+
+/* -------Basic_styles------------ */
+
+body {
+   font-family: var(--font-family-base);
+   font-weight: 400;
+   font-size: 19px;
+   line-height: 1.75;
+   background-color: var(--color-white);
+}
+
+p {
+   margin-block: 0;
+}
+
+.container {
+   max-width: 1020px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+
+/* -------------HEADER--------------- */
+
+
+.header {
+   width: 100%;
+   height: 800px;
+   background: url("./images/lasting_memories-min.png") center  / cover no-repeat;
+}
+
+.header__top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 40px;
+}
+
+.header__top-logo {
+   flex-shrink: 0;
+}
+
+.header__top-menu {
+   padding: 0 0 0 40px;
+}
+
+.menu__list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   column-gap: 60px;
+}
+
+.menu__list-link {
+   font-size: 18px;
+   text-decoration: none;
+   color: var(--color-white);
+}
+
+.menu__list-link:hover {
+   color: var(--color-dark)
+}
+
+.header__title {
+   padding: 180px 0 0 0;
+   text-align: center;
+   color: var(--color-white);
+   text-transform: uppercase;
+   font-size: 68px;
+}
+
+
+/* -------------MEDIA---------------- */
+
+
+@media (max-width: 992px) {
+
+   .menu__list {
+      column-gap: 45px;
+   }
+
+   .menu__list-link {
+      font-size: 16px;
+   }
+
+   .header__title {
+      font-size: 60px;
+   }
+}
+
+
+@media (max-width: 768px) {
+
+   .header__top {
+      flex-direction: column;
+      row-gap: 10px;
+      padding-top: 20px;
+   }
+
+   .menu__list {
+      column-gap: 30px;
+   }
+
+
+   .menu__list-link {
+      font-size: 16px;
+   }
+
+   .header__title {
+      font-size: 50px;
+   }
+}
+
+
+@media (max-width: 576px) {
+
+   .header {
+      height: 700px;
+   }
+
+   .header__title {
+      padding: 100px 0 0 0;
+      font-size: 45px;
+   }
+}
+
