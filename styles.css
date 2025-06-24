@@ -375,6 +375,10 @@ a {
    color: var(--color-dark);
 }
 
+.collections__number-arrow-icon-left {
+   rotate: 180deg;
+}
+
 
 /* -------------MEDIA---------------- */
 
