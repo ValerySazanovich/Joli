@@ -88,7 +88,7 @@ html {
    height: 100%;
    /**
    Плавный скролл
- */
+   */
    scroll-behavior: smooth;
 }
 
@@ -108,14 +108,14 @@ body {
    Удаляем все анимации и переходы для людей,
    которые предпочитают их не использовать
  */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
    * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
    }
-}
+} */
 
 
 /* --------Global_variables-------- */
@@ -172,6 +172,24 @@ a {
    font-weight: 400;
    line-height: 1.1;
    color: var(--color-white);
+}
+
+.btn {
+   display: inline-block;
+   height: 50px;
+   line-height: 50px;
+   padding: 0 30px;
+   border: 1px solid #20201F;
+   border-radius: 42px;
+   cursor: pointer;
+   font-family: var(--font-family-title);
+   color: var(--color-dark);
+   text-transform: lowercase;
+   background-color: var(--color-white);
+}
+
+.btn:hover {
+   background-color: rgb(221, 221, 221);
 }
 
 
@@ -247,29 +265,9 @@ a {
    padding-bottom: 70px;
 }
 
-.tables__info-about {
-   width: 155px;
-   height: 50px;
-   border-radius: 42px;
-   cursor: pointer;
-   font-family: var(--font-family-title);
-   color: var(--color-dark);
-   text-transform: lowercase;
-}
-
-.tables__info-about:hover {
-   background-color: grey;
-}
-
-.tables__info-collections {
+.tables__info-collections-link {
    border: none;
-   text-transform: lowercase;
    padding-left: 20px;
-}
-
-.tables__info-collections:hover {
-   cursor: pointer;
-   color: grey;
 }
 
 .tables__info-img1 {
@@ -380,6 +378,53 @@ a {
 }
 
 
+/* ----------DEALER--------------- */
+
+
+.dealer {
+   height: 840px;
+   position: relative;
+   overflow: hidden;
+}
+.dealer__info {
+   max-width: 415px;
+   padding-top: 120px;
+}
+
+.dealer__info-title {
+   padding-bottom: 55px;
+}
+
+.dealer__info-disc {
+   padding-bottom: 40px;
+}
+
+.dealer__info-form {
+   max-width: 325px;
+}
+
+.dealer__info-form-search {
+   border-radius: 15px;
+   height: 62px;
+   margin-bottom: 37px;
+   line-height: 62px;
+}
+
+.dealer__img {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 50%;
+   height: 100%;
+}
+
+.dealer__img-pic {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
 /* -------------MEDIA---------------- */
 
 
@@ -431,8 +476,6 @@ a {
       max-width: 320px;
    }
 
-   
-
    .tables__info-img1 {
       max-width: 200px;
       right: 25%;
@@ -461,6 +504,18 @@ a {
 
    .collections__img2 {
       max-width: 300px;
+   }
+
+   .dealer {
+      height: 740px;
+   }
+
+   .dealer__info {
+      max-width: 365px;
+   }
+
+   .dealer__img {
+      width: 40%;
    }
 }
 
@@ -529,6 +584,14 @@ p {
    .collections__img2 {
       max-width: 250px;
    }
+
+   .dealer {
+      height: 640px;
+   }
+
+   .dealer__info {
+      max-width: 315px;
+   }
 }
 
 
@@ -593,6 +656,19 @@ p {
    .collections__info-arrow-icon {
       display: none;
    }
+
+   .dealer {
+      height: 700px;
+   }
+
+   .dealer__info {
+      max-width: 280px;
+      padding: 100px 0 0 0;
+   }
+
+   .dealer__img {
+      width: 30%;
+   }
 }
 
 
@@ -626,5 +702,32 @@ p {
       height: 700px;
    }
 
+   .dealer {
+      height: 600px;
+      text-align: center;
+   }
+
+   .dealer__info {
+      max-width: 100%;
+   }
+
+   .dealer__info-form {
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   .dealer__img {
+      display: none;
+   }
+
+   .btn {
+      height: 45px;
+      line-height: 45px;
+   }
+
+   .dealer__info-form-search {
+      height: 52px;
+      line-height: 52px;
+   }
 }
 

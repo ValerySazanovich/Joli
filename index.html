@@ -40,7 +40,7 @@
                      </li>
 
                      <li class="menu__list-item">
-                        <a href="#" class="menu__list-link">Find a dealer</a>
+                        <a href="#dealer" class="menu__list-link">Find a dealer</a>
                      </li>
                   </ul>
                </nav>
@@ -83,12 +83,12 @@
                         </p>
                      </div>
 
-                     <a href="#" class="tables__info-about-link">
-                        <button class="tables__info-about">About us</button>
+                     <a href="#" class="tables__info-about-link btn">
+                        About us
                      </a>
 
-                     <a href="#collections" class="tables__info-collections-link">
-                        <button class="tables__info-collections">Collections</button>
+                     <a href="#collections" class="tables__info-collections-link btn">
+                        Collections
                      </a>
                   </div>
 
@@ -98,7 +98,7 @@
             </div>
          </section>
 
-         <section class="collections">
+         <section class="collections" id="collections">
 
             <div class="collections__img2">
                <div class="collections__img2-wrapper">
@@ -112,7 +112,7 @@
 
             <div class="container">
                <div class="collections__info">
-                  <h2 class="collections-title title" id="collections">
+                  <h2 class="collections-title title">
                      Our<br> collections
                   </h2>
 
@@ -170,6 +170,28 @@
                <img src="./icons/arrow_right.svg" alt="arrow right" class="collections__number-arrow-icon">
             </div>
             
+         </section>
+
+         <section class="dealer" id="dealer">
+            <div class="container">
+               <div class="dealer__info">
+                  <h2 class="dealer__info-title title">Find a<br> dealer</h2>
+                  <div class="dealer__info-disc">
+                     <p>
+                        We work together with dealers in 19 countries, all over the world. Find out which one is closest to you.
+                     </p>
+                  </div>
+
+                  <form action="#" class="dealer__info-form">
+                     <input type="search" name="search-dealer" class="dealer__info-form-search" id="search" placeholder="   Your location">
+                     <button type="submit" class="dealer__info-form-button btn">search</button>
+                  </form>
+               </div>
+            </div>
+
+            <div class="dealer__img">
+               <img src="./images/dealer.webp" alt="picture" class="dealer__img-pic">
+            </div>
          </section>
       </main>
    </body>
