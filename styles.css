@@ -188,8 +188,14 @@ a {
    background-color: var(--color-white);
 }
 
+.btn--white {
+   color: var(--color-white);
+   background-color: var(--color-dark);
+   border: 1px solid var(--color-white);
+}
+
 .btn:hover {
-   background-color: rgb(221, 221, 221);
+   background-color: rgb(167, 167, 167);
 }
 
 
@@ -199,7 +205,7 @@ a {
 .header {
    width: 100%;
    height: 800px;
-   background: url("./images/lasting_memories-min.png") center  / cover no-repeat;
+   background: url("./images/lasting_memories-min.jpg") center  / cover no-repeat;
 }
 
 .header__top {
@@ -425,6 +431,78 @@ a {
 }
 
 
+/* -----------INSPIRE----------- */
+
+.inspire {
+   position: relative;
+   width: 100%;
+   height: 590px;
+   background-color: var(--color-dark);
+   overflow: hidden;
+}
+
+.container {
+   position: relative;
+}
+
+.inspire__body {
+   margin: 0 auto;
+   max-width: 720px;
+   padding: 120px 0;
+   text-align: center;
+}
+
+.inspire__body-title span {
+   display: block;
+   padding-bottom: 40px;
+}
+
+.inspire__body-title {
+   position: relative;
+   padding-bottom: 100px;
+   z-index: 10;
+}
+
+.inspire__body-link {
+   z-index: 10;
+}
+
+.inspire__pic1 {
+   position: absolute;
+   top: 0;
+   left: auto;
+}
+
+.inspire__pic2 {
+   position: absolute;
+   top: 430px;
+   right: 0;
+}
+
+.inspire__pic3 {
+   position: absolute;
+   top: 85px;
+   right: 0;
+}
+
+
+/* -----------DESIGNS----------------- */
+
+.designs__body {
+   padding: 100px 0;
+   text-align: center;
+}
+
+.designs__body-text {
+   padding-bottom: 35px;
+}
+
+.designs__body-text-item {
+   font-family: var(--font-family-title);
+   font-size: 49px;
+}
+
+
 /* -------------MEDIA---------------- */
 
 
@@ -592,6 +670,10 @@ p {
    .dealer__info {
       max-width: 315px;
    }
+
+   .designs__body-text-item {
+      font-size: 40px;
+   }
 }
 
 
@@ -669,6 +751,23 @@ p {
    .dealer__img {
       width: 30%;
    }
+
+   .inspire__body-title {
+      padding-bottom: 60px;
+   }
+
+   .inspire__pic1 {
+      display: none;
+   }
+
+   .inspire__pic2 {
+      width: 100%;
+   }
+
+   .designs__body-text-item {
+      font-size: 35px;
+   }
+
 }
 
 
