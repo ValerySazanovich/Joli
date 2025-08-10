@@ -503,6 +503,56 @@ a {
 }
 
 
+/* -----------About-us----------------- */
+
+.about-us {
+   width: 100%;
+   height: 840px;
+   position: relative;
+}
+
+.about-us__pic {
+   width: 50%;
+   height: 100%;
+   position: absolute;
+}
+
+.about-us__pic img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.about-us-body {
+   display: flex;
+   justify-content: flex-end;
+   column-gap: 40px;
+}
+
+.about-us__info {
+   width: 50%;
+}
+
+.about-us__info-title {
+   max-width: 270px;
+   padding-left: 15px;
+   margin: 115px auto 65px;
+}
+
+.about-us__info-desc {
+   max-width: 445px;
+   padding-left: 15px;
+   margin: 0 auto;
+}
+
+.about-us__link {
+   margin: 70px 0 0 50px;
+}
+
+.contact {
+   margin-top: 100px;
+}
+
 /* -------------MEDIA---------------- */
 
 
@@ -674,6 +724,10 @@ p {
    .designs__body-text-item {
       font-size: 40px;
    }
+
+   .about-us {
+      height: 740px;
+   }
 }
 
 
@@ -766,6 +820,10 @@ p {
 
    .designs__body-text-item {
       font-size: 35px;
+   }
+
+   .about-us__link {
+      margin: 70px 0 0 20px;
    }
 
 }
